@@ -27,4 +27,23 @@ class Controller extends BaseController
             'data' => null
         ], $statusCode);
     }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return JsonResponse
+     */
+    public function index(): JsonResponse
+    {
+        $name = str_replace('Controller', '', class_basename($this));
+
+        $model = sprintf('\App\Models\%s', $name);
+
+        $data =  (new $model)->all();
+
+        if ($data->count() == 0)
+            return $this->returnFalse();
+
+        return $this->returnSuccess($data);
+    }
 }
