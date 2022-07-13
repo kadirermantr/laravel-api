@@ -51,4 +51,18 @@ class Controller extends BaseController
 
         return $this->returnSuccess($data);
     }
+
+    /**
+     * @param $id
+     * @return JsonResponse
+     */
+    public function show($id): JsonResponse
+    {
+        $data = (new $this->model)->find($id);
+
+        if (empty($data))
+            return $this->returnFalse();
+
+        return $this->returnSuccess($data);
+    }
 }
