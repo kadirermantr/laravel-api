@@ -53,6 +53,8 @@ class Controller extends BaseController
     }
 
     /**
+     * Display the specified resource.
+     *
      * @param $id
      * @return JsonResponse
      */
