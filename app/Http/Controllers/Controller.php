@@ -44,7 +44,7 @@ class Controller extends BaseController
      */
     public function index(): JsonResponse
     {
-        $data =  (new $this->model)->all();
+        $data = (new $this->model)->all();
 
         if ($data->count() == 0)
             return $this->returnFalse();
