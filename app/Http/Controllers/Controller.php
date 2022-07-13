@@ -8,6 +8,9 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Routing\Controller as BaseController;
 
+use function App\returnFalse;
+use function App\returnSuccess;
+
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
@@ -21,22 +24,6 @@ class Controller extends BaseController
         $this->model = sprintf('\App\Models\%s', $this->name);
     }
 
-    public function returnSuccess($data): JsonResponse
-    {
-        return response()->json([
-            'success' => true,
-            'data' => $data,
-        ]);
-    }
-
-    public function returnFalse(?int $statusCode = 404): JsonResponse
-    {
-        return response()->json([
-            'success' => false,
-            'data' => null
-        ], $statusCode);
-    }
-
     /**
      * Display a listing of the resource.
      *
@@ -47,9 +34,9 @@ class Controller extends BaseController
         $data = (new $this->model)->all();
 
         if ($data->count() == 0)
-            return $this->returnFalse();
+            return returnFalse();
 
-        return $this->returnSuccess($data);
+        return returnSuccess($data);
     }
 
     /**
@@ -63,8 +50,8 @@ class Controller extends BaseController
         $data = (new $this->model)->find($id);
 
         if (empty($data))
-            return $this->returnFalse();
+            return returnFalse();
 
-        return $this->returnSuccess($data);
+        return returnSuccess($data);
     }
 }
