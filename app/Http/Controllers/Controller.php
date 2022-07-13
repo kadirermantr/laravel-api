@@ -12,6 +12,15 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
+    public string $name;
+    public string $model;
+
+    public function __construct()
+    {
+        $this->name = str_replace('Controller', '', class_basename($this));
+        $this->model = sprintf('\App\Models\%s', $this->name);
+    }
+
     public function returnSuccess($data): JsonResponse
     {
         return response()->json([
@@ -35,11 +44,7 @@ class Controller extends BaseController
      */
     public function index(): JsonResponse
     {
-        $name = str_replace('Controller', '', class_basename($this));
-
-        $model = sprintf('\App\Models\%s', $name);
-
-        $data =  (new $model)->all();
+        $data =  (new $this->model)->all();
 
         if ($data->count() == 0)
             return $this->returnFalse();
