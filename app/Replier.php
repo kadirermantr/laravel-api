@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Http\JsonResponse;
 
-class Replyer
+class Replier
 {
     public static function responseSuccess($data): JsonResponse
     {

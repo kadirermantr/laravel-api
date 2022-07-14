@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Replyer;
+use App\Replier;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -32,9 +32,9 @@ class Controller extends BaseController
         $data = (new $this->model)->all();
 
         if ($data->count() == 0)
-            return Replyer::responseFalse();
+            return Replier::responseFalse();
 
-        return Replyer::responseSuccess($data);
+        return Replier::responseSuccess($data);
     }
 
     /**
@@ -48,8 +48,8 @@ class Controller extends BaseController
         $data = (new $this->model)->find($id);
 
         if (empty($data))
-            return Replyer::responseFalse();
+            return Replier::responseFalse();
 
-        return Replyer::responseSuccess($data);
+        return Replier::responseSuccess($data);
     }
 }
