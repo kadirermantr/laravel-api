@@ -9,6 +9,8 @@ This project was created to practice with API in Laravel 9.
 ## To-Do List
 
 - [ ] Add new functions
+- [ ] Add exceptions
+- [ ] Create postman collections
 - [ ] Create wiki page
 - [ ] Get feedbacks
 
