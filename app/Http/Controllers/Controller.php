@@ -7,7 +7,10 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as BaseController;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\ValidationException;
 
 class Controller extends BaseController
 {
@@ -15,11 +18,13 @@ class Controller extends BaseController
 
     public string $name;
     public string $model;
+    public string $request;
 
     public function __construct()
     {
         $this->name = str_replace('Controller', '', class_basename($this));
         $this->model = sprintf('\App\Models\%s', $this->name);
+        $this->request = sprintf('\App\Http\Requests\%s%s', $this->name, 'Request');
     }
 
     /**
@@ -49,6 +54,25 @@ class Controller extends BaseController
 
         if (empty($data))
             return Replier::responseFalse();
+
+        return Replier::responseSuccess($data);
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param Request $request
+     * @return JsonResponse
+     * @throws ValidationException
+     */
+    public function store(Request $request): JsonResponse
+    {
+        $validator = Validator::make($request->all(), (new $this->request)->rules());
+
+        if ($validator->fails())
+            Replier::responseError($validator);
+
+        $data = (new $this->model)->create($validator->validated());
 
         return Replier::responseSuccess($data);
     }
