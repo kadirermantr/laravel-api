@@ -1,0 +1,326 @@
+{
+    "info": {
+        "_postman_id": "55a2f4b8-8fdb-4f46-ba0e-0c05e98c0726",
+        "name": "Laravel API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Users",
+            "item": [
+                {
+                    "name": "Users Index",
+                    "id": "de8fae24-d148-431a-ba67-49cc675dbabb",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{endpoint}}/user",
+                            "host": [
+                                "{{endpoint}}"
+                            ],
+                            "path": [
+                                "user"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Users Show",
+                    "id": "851152ea-c66d-48a4-937c-15a301164fa1",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{endpoint}}/user/1",
+                            "host": [
+                                "{{endpoint}}"
+                            ],
+                            "path": [
+                                "user",
+                                "1"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Users Create",
+                    "id": "9a460395-d4e4-4daf-afb7-675fb0fcddec",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n\t\"name\": \"Name\",\n    \"email\": \"test@test.com\",\n    \"password\": \"password\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{endpoint}}/user/",
+                            "host": [
+                                "{{endpoint}}"
+                            ],
+                            "path": [
+                                "user",
+                                ""
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ],
+            "id": "d9d97c9f-5813-4597-adad-2a5409768a19"
+        },
+        {
+            "name": "Books",
+            "item": [
+                {
+                    "name": "Books Index",
+                    "id": "a03b781d-37ab-49fa-8628-cc068e6f6521",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{endpoint}}/book",
+                            "host": [
+                                "{{endpoint}}"
+                            ],
+                            "path": [
+                                "book"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Books Show",
+                    "id": "4003ce63-68f7-4529-92b1-a772e0a7062f",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{endpoint}}/book/1",
+                            "host": [
+                                "{{endpoint}}"
+                            ],
+                            "path": [
+                                "book",
+                                "1"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Books Create",
+                    "id": "74bae257-0d58-45d1-b655-131434060270",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n\t\"name\": \"Momo\",\n    \"description\": \"It is about the concept of time and how it is used by humans in modern societies.\",\n    \"page\": 303,\n    \"language\": \"German\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{endpoint}}/book",
+                            "host": [
+                                "{{endpoint}}"
+                            ],
+                            "path": [
+                                "book"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ],
+            "id": "1b9a09b5-86a4-44ba-804a-0ad28e0ddc55"
+        },
+        {
+            "name": "Authors",
+            "item": [
+                {
+                    "name": "Authors Index",
+                    "id": "f920f381-5b03-4311-b472-7a8221527076",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{endpoint}}/author",
+                            "host": [
+                                "{{endpoint}}"
+                            ],
+                            "path": [
+                                "author"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Authors Show",
+                    "id": "75e9bca7-3fd8-4a74-97d9-5b9e04371137",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{endpoint}}/author/1",
+                            "host": [
+                                "{{endpoint}}"
+                            ],
+                            "path": [
+                                "author",
+                                "1"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Authors Create",
+                    "id": "ed8f293f-88d6-403d-b027-a917eb90722c",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n\t\"name\": \"Michael Ende\",\n    \"biography\": \"Has was a German writer of fanstasy and children's fiction.\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{endpoint}}/author",
+                            "host": [
+                                "{{endpoint}}"
+                            ],
+                            "path": [
+                                "author"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ],
+            "id": "518251de-36ca-4b12-8fd9-32f5bd911cc1"
+        },
+        {
+            "name": "Categories",
+            "item": [
+                {
+                    "name": "Categories Index",
+                    "id": "1ed75758-7dbe-4f0d-bc59-344f5035d084",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{endpoint}}/category",
+                            "host": [
+                                "{{endpoint}}"
+                            ],
+                            "path": [
+                                "category"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Categories Show",
+                    "id": "70b839ff-c5b2-4613-8a0f-74776feac482",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{endpoint}}/category/1",
+                            "host": [
+                                "{{endpoint}}"
+                            ],
+                            "path": [
+                                "category",
+                                "1"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Categories Create",
+                    "id": "fad779d8-caf7-43d1-a5bc-77544566e272",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n\t\"name\": \"Novel\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{endpoint}}/category",
+                            "host": [
+                                "{{endpoint}}"
+                            ],
+                            "path": [
+                                "category"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ],
+            "id": "688337ba-cf8f-4297-bd74-67aa9dd3fda6"
+        }
+    ]
+}

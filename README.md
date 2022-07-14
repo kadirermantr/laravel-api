@@ -9,7 +9,7 @@ This project was created to practice with API in Laravel 9.
 ## To-Do List
 
 - [x] Add new functions
-- [ ] Create postman collections
+- [x] Create postman collections
 - [ ] Create wiki page
 - [ ] Build request system
 - [ ] Build exception system
