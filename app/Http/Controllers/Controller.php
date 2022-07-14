@@ -2,14 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Replyer;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Routing\Controller as BaseController;
-
-use function App\responseFalse;
-use function App\responseSuccess;
 
 class Controller extends BaseController
 {
@@ -34,9 +32,9 @@ class Controller extends BaseController
         $data = (new $this->model)->all();
 
         if ($data->count() == 0)
-            return responseFalse();
+            return Replyer::responseFalse();
 
-        return responseSuccess($data);
+        return Replyer::responseSuccess($data);
     }
 
     /**
@@ -50,8 +48,8 @@ class Controller extends BaseController
         $data = (new $this->model)->find($id);
 
         if (empty($data))
-            return responseFalse();
+            return Replyer::responseFalse();
 
-        return responseSuccess($data);
+        return Replyer::responseSuccess($data);
     }
 }
