@@ -6,19 +6,30 @@ use Illuminate\Http\JsonResponse;
 
 class Replier
 {
-    public static function responseSuccess($data): JsonResponse
+    public static function response(bool $success, int $code, $data = null): JsonResponse
     {
-        return response()->json([
-            'success' => true,
+        $body = [
+            'success' => $success,
             'data' => $data,
-        ]);
+        ];
+
+        return response()->json($body, $code);
     }
 
-    public static function responseFalse(): JsonResponse
+    public static function responseSuccess($data): JsonResponse
     {
-        return response()->json([
-            'success' => false,
-            'data' => null,
-        ]);
+        return self::response(
+            true,
+            200,
+            $data,
+        );
+    }
+
+    public static function responseFalse(int $code = 400): JsonResponse
+    {
+        return self::response(
+            false,
+            $code,
+        );
     }
 }
