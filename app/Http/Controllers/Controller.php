@@ -8,8 +8,8 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Routing\Controller as BaseController;
 
-use function App\returnFalse;
-use function App\returnSuccess;
+use function App\responseFalse;
+use function App\responseSuccess;
 
 class Controller extends BaseController
 {
@@ -34,9 +34,9 @@ class Controller extends BaseController
         $data = (new $this->model)->all();
 
         if ($data->count() == 0)
-            return returnFalse();
+            return responseFalse();
 
-        return returnSuccess($data);
+        return responseSuccess($data);
     }
 
     /**
@@ -50,8 +50,8 @@ class Controller extends BaseController
         $data = (new $this->model)->find($id);
 
         if (empty($data))
-            return returnFalse();
+            return responseFalse();
 
-        return returnSuccess($data);
+        return responseSuccess($data);
     }
 }

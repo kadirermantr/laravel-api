@@ -4,8 +4,8 @@ namespace App;
 
 use Illuminate\Http\JsonResponse;
 
-if (! function_exists('returnSuccess')) {
-    function returnSuccess($data): JsonResponse
+if (! function_exists('responseSuccess')) {
+    function responseSuccess($data): JsonResponse
     {
         return response()->json([
             'success' => true,
@@ -14,8 +14,8 @@ if (! function_exists('returnSuccess')) {
     }
 }
 
-if (! function_exists('returnFalse')) {
-    function returnFalse(?int $statusCode = 400): JsonResponse
+if (! function_exists('responseFalse')) {
+    function responseFalse(?int $statusCode = 400): JsonResponse
     {
         return response()->json([
             'success' => false,
