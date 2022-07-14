@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Http\JsonResponse;
+use Illuminate\Validation\ValidationException;
 
 class Replier
 {
@@ -32,5 +33,12 @@ class Replier
             $code,
             $data,
         );
+    }
+
+    public static function responseError($validator): JsonResponse
+    {
+        $response = self::responseFalse($validator->errors()->first(), 422);
+
+        throw new ValidationException($validator, $response);
     }
 }
