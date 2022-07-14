@@ -15,11 +15,11 @@ if (! function_exists('returnSuccess')) {
 }
 
 if (! function_exists('returnFalse')) {
-    function returnFalse(?int $statusCode = 404): JsonResponse
+    function returnFalse(?int $statusCode = 400): JsonResponse
     {
         return response()->json([
             'success' => false,
-            'data' => null
+            'data' => null,
         ], $statusCode);
     }
 }
