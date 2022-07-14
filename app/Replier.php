@@ -25,11 +25,12 @@ class Replier
         );
     }
 
-    public static function responseFalse(int $code = 400): JsonResponse
+    public static function responseFalse($data = null, int $code = 400): JsonResponse
     {
         return self::response(
             false,
             $code,
+            $data,
         );
     }
 }
