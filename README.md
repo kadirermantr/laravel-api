@@ -20,7 +20,7 @@ Have you got a better idea?
 
 If you are ambitious about it, follow these steps:
 
-1. Check out  [pull requests](https://github.com/kadirermantr/laravel-api/pulls)
+1. Check out [issues](https://github.com/kadirermantr/laravel-api/issues)
 2. Create a new branch and to do development
 3. Open a pull request
 
