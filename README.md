@@ -6,15 +6,6 @@ This project was created to practice with API in Laravel 9.
 - [Laravel Documentation](https://laravel.com/docs/)
 - [Laravel API Tutorial](https://www.codewolfy.com/blog/laravel-simple-restful-api-tutorial)
 
-## To-Do List
-
-- [x] Add new functions
-- [x] Create postman collections
-- [ ] Create wiki page
-- [ ] Build request system
-- [ ] Build exception system
-- [ ] Get feedbacks
-
 ## Contributing
 
 Have you got a better idea?
