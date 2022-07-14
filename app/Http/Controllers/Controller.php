@@ -76,4 +76,24 @@ class Controller extends BaseController
 
         return Replier::responseSuccess($data);
     }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param $id
+     * @return JsonResponse
+     */
+    public function destroy($id): JsonResponse
+    {
+        $model = (new $this->model);
+
+        $data = $model->find($id);
+
+        if (empty($data))
+            return Replier::responseFalse();
+
+        $model->destroy($id);
+
+        return Replier::responseSuccess($data);
+    }
 }
