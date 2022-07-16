@@ -7,12 +7,15 @@ use Illuminate\Validation\ValidationException;
 
 class Replier
 {
-    public static function response(bool $success, int $code, $data = null): JsonResponse
+    public static function response(bool $success, int $code, $data = null, $message = null): JsonResponse
     {
         $body = [
             'success' => $success,
             'data' => $data,
         ];
+
+        if (isset($message))
+            $body['message'] = $message;
 
         return response()->json($body, $code);
     }
@@ -26,12 +29,13 @@ class Replier
         );
     }
 
-    public static function responseFalse($data = null, int $code = 400): JsonResponse
+    public static function responseFalse($data = null, $message = null, int $code = 400): JsonResponse
     {
         return self::response(
             false,
             $code,
             $data,
+            $message,
         );
     }
 
