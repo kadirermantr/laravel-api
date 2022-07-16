@@ -2,7 +2,9 @@
 
 namespace App\Exceptions;
 
+use App\Replier;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Illuminate\Http\JsonResponse;
 use Throwable;
 
 class Handler extends ExceptionHandler
@@ -46,5 +48,21 @@ class Handler extends ExceptionHandler
         $this->reportable(function (Throwable $e) {
             //
         });
+    }
+
+    /**
+     * Prepare a response for the given exception.
+     *
+     * @param $request
+     * @param Throwable $e
+     * @return JsonResponse
+     */
+    public function prepareResponse($request, Throwable $e)
+    {
+        return Replier::responseFalse(
+            null,
+            $e->getMessage(),
+            $e->getStatusCode()
+        );
     }
 }
