@@ -56,7 +56,7 @@ class Handler extends ExceptionHandler
         return Replier::responseFalse(
             null,
             $e->getMessage(),
-            $e->getStatusCode()
+            $e->getCode()
         );
     }
 }
