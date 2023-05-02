@@ -40,10 +40,8 @@ class Handler extends ExceptionHandler
 
     /**
      * Register the exception handling callbacks for the application.
-     *
-     * @return void
      */
-    public function register()
+    public function register(): void
     {
         $this->reportable(function (Throwable $e) {
             //
@@ -52,12 +50,8 @@ class Handler extends ExceptionHandler
 
     /**
      * Prepare a response for the given exception.
-     *
-     * @param $request
-     * @param Throwable $e
-     * @return JsonResponse
      */
-    public function prepareResponse($request, Throwable $e)
+    public function prepareResponse($request, Throwable $e): JsonResponse
     {
         return Replier::responseFalse(
             null,
