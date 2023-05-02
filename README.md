@@ -1,6 +1,6 @@
 ## About the Project
 
-This project was created to practice with API in Laravel 9.
+This project was created to practice with API in Laravel 10.
 
 More on [Wiki](https://github.com/kadirermantr/laravel-api/wiki) page :)
 
