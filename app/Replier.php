@@ -14,8 +14,9 @@ class Replier
             'data' => $data,
         ];
 
-        if (isset($message))
+        if (isset($message)) {
             $body['message'] = $message;
+        }
 
         return response()->json($body, $code);
     }

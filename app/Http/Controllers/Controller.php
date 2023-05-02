@@ -12,7 +12,9 @@ use Illuminate\Validation\ValidationException;
 class Controller extends BaseController
 {
     public string $name;
+
     public string $model;
+
     public string $request;
 
     public function __construct()
@@ -24,31 +26,28 @@ class Controller extends BaseController
 
     /**
      * Display a listing of the resource.
-     *
-     * @return JsonResponse
      */
     public function index(): JsonResponse
     {
         $data = (new $this->model)->all();
 
-        if ($data->count() == 0)
+        if ($data->count() == 0) {
             return Replier::responseFalse();
+        }
 
         return Replier::responseSuccess($data);
     }
 
     /**
      * Display the specified resource.
-     *
-     * @param $id
-     * @return JsonResponse
      */
     public function show($id): JsonResponse
     {
         $data = (new $this->model)->find($id);
 
-        if (empty($data))
+        if (empty($data)) {
             return Replier::responseFalse();
+        }
 
         return Replier::responseSuccess($data);
     }
@@ -56,16 +55,15 @@ class Controller extends BaseController
     /**
      * Store a newly created resource in storage.
      *
-     * @param Request $request
-     * @return JsonResponse
      * @throws ValidationException
      */
     public function store(Request $request): JsonResponse
     {
         $validator = Validator::make($request->all(), (new $this->request)->rules());
 
-        if ($validator->fails())
+        if ($validator->fails()) {
             Replier::responseError($validator);
+        }
 
         $data = (new $this->model)->create($validator->validated());
 
@@ -74,9 +72,6 @@ class Controller extends BaseController
 
     /**
      * Remove the specified resource from storage.
-     *
-     * @param $id
-     * @return JsonResponse
      */
     public function destroy($id): JsonResponse
     {
@@ -84,8 +79,9 @@ class Controller extends BaseController
 
         $data = $model->find($id);
 
-        if (empty($data))
+        if (empty($data)) {
             return Replier::responseFalse();
+        }
 
         $model->destroy($id);
 
