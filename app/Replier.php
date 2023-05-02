@@ -40,6 +40,9 @@ class Replier
         );
     }
 
+    /**
+     * @throws ValidationException
+     */
     public static function responseError($validator): JsonResponse
     {
         $response = self::responseFalse($validator->errors()->first(), 422);
