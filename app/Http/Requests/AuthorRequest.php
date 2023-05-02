@@ -8,10 +8,8 @@ class AuthorRequest extends FormRequest
 {
     /**
      * Get the validation rules that apply to the request.
-     *
-     * @return array
      */
-    public static function rules()
+    public static function rules(): array
     {
         return [
             'name' => 'required|string',
