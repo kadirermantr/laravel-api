@@ -20,8 +20,8 @@ class Controller extends BaseController
     public function __construct()
     {
         $this->name = str_replace('Controller', '', class_basename($this));
-        $this->model = sprintf('\App\Models\%s', $this->name);
-        $this->request = sprintf('\App\Http\Requests\%s%s', $this->name, 'Request');
+        $this->model = '\App\Models\\'.$this->name;
+        $this->request = '\App\Http\Requests\\'.$this->name.'Request';
     }
 
     /**
