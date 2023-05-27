@@ -1,7 +1,7 @@
 {
-    "name": "laravel/laravel",
+    "name": "kadirermantr/laravel-api",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "Laravel API",
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "require": {
