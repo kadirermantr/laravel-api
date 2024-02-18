@@ -2,7 +2,7 @@ repo_name: kadirermantr/laravel-api
 report_id: af1f27bde6c55d4b5da2d794af1fa39a
 version: 0.1
 repo_type: Public
-timestamp: '2023-12-17T20:12:29+00:00'
+timestamp: '2024-01-05T08:21:15+00:00'
 requested_by: kadirermantr
 provider: github
 branch: master
@@ -17,6 +17,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source_url: https://github.com/kadirermantr/laravel-api
   detection_source: Repo Metadata
 - name: PHP
   description: A popular general-purpose scripting language that is especially suited
@@ -27,6 +28,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/991/hwUcGZ41_400x400.jpg
+  detection_source_url: https://github.com/kadirermantr/laravel-api
   detection_source: Repo Metadata
 - name: Guzzle
   description: PHP HTTP client that makes it easy to send HTTP requests and trivial
@@ -38,6 +40,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Microframeworks (Backend)
   image_url: https://img.stackshare.io/service/2350/638632.png
+  detection_source_url: https://github.com/kadirermantr/laravel-api/blob/master/composer.json
   detection_source: composer.json
   last_updated_by: kadirerman
   last_updated_on: 2023-05-02 12:29:42.000000000 Z
@@ -63,6 +66,7 @@ tools:
   category: Languages & Frameworks
   sub_category: CSS Pre-processors / Extensions
   image_url: https://img.stackshare.io/service/3339/rlFcjEdI.png
+  detection_source_url: https://github.com/kadirermantr/laravel-api/blob/master/package.json
   detection_source: package.json
   last_updated_by: kadir-erman
   last_updated_on: 2022-07-13 19:58:37.000000000 Z
@@ -74,6 +78,7 @@ tools:
   category: Data Stores
   sub_category: Databases
   image_url: https://img.stackshare.io/service/1025/logo-mysql-170x170.png
+  detection_source_url: https://github.com/kadirermantr/laravel-api/blob/master/docker-compose.yml
   detection_source: docker-compose.yml
   last_updated_by: kadir-erman
   last_updated_on: 2022-07-13 19:58:37.000000000 Z
@@ -86,6 +91,7 @@ tools:
   category: Data Stores
   sub_category: In-Memory Databases
   image_url: https://img.stackshare.io/service/1031/default_cbce472cd134adc6688572f999e9122b9657d4ba.png
+  detection_source_url: https://github.com/kadirermantr/laravel-api/blob/master/docker-compose.yml
   detection_source: docker-compose.yml
   last_updated_by: kadir-erman
   last_updated_on: 2022-07-13 19:58:37.000000000 Z
@@ -97,6 +103,7 @@ tools:
   category: Data Stores
   sub_category: Database Tools
   image_url: https://img.stackshare.io/service/109221/default_b888cdf5617d936aa6aacf130911906955508639.png
+  detection_source_url: https://github.com/kadirermantr/laravel-api/blob/master/public/robots.txt
   detection_source: public/robots.txt
   last_updated_by: kadir-erman
   last_updated_on: 2022-07-13 19:58:37.000000000 Z
@@ -108,6 +115,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Version Control System
   image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/kadirermantr/laravel-api
   detection_source: Repo Metadata
 - name: GitHub Actions
   description: Automate your workflow from idea to production
@@ -117,6 +125,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Continuous Integration
   image_url: https://img.stackshare.io/service/11563/actions.png
+  detection_source_url: https://github.com/kadirermantr/laravel-api/blob/master/.github/workflows/laravel.yml
   detection_source: ".github/workflows/laravel.yml"
   last_updated_by: Kadir Erman
   last_updated_on: 2023-05-06 15:41:39.000000000 Z
@@ -143,6 +152,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: JS Build Tools / JS Task Runners
   image_url: https://img.stackshare.io/service/21547/default_1aeac791cde11ff66cc0b20dcc6144eeb185c905.png
+  detection_source_url: https://github.com/kadirermantr/laravel-api/blob/master/package.json
   detection_source: package.json
   last_updated_by: kadir-erman
   last_updated_on: 2022-07-13 19:58:37.000000000 Z
@@ -154,6 +164,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Front End Package Manager
   image_url: https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png
+  detection_source_url: https://github.com/kadirermantr/laravel-api/blob/master/package.json
   detection_source: package.json
   last_updated_by: kadir-erman
   last_updated_on: 2022-07-13 19:58:37.000000000 Z
@@ -166,6 +177,7 @@ tools:
   category: Application Hosting
   sub_category: Platform as a Service
   image_url: https://img.stackshare.io/service/139/s01TMTGn.png
+  detection_source_url: https://github.com/kadirermantr/laravel-api/blob/master/docker-compose.yml
   detection_source: docker-compose.yml
   last_updated_by: kadir-erman
   last_updated_on: 2022-07-13 19:58:37.000000000 Z
@@ -178,6 +190,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Operating Systems
   image_url: https://img.stackshare.io/service/6429/alpine_linux.png
+  detection_source_url: https://github.com/kadirermantr/laravel-api/blob/master/docker-compose.yml
   detection_source: docker-compose.yml
   last_updated_by: kadir-erman
   last_updated_on: 2022-07-13 19:58:37.000000000 Z
@@ -189,6 +202,7 @@ tools:
   category: Communications
   sub_category: Large Language Model Tools
   image_url: https://img.stackshare.io/service/48790/default_5b6c6b73f1ff3775c85d2a1ba954cb87e30cbf13.jpg
+  detection_source_url: https://github.com/kadirermantr/laravel-api/blob/master/public/robots.txt
   detection_source: public/robots.txt
   last_updated_by: kadir-erman
   last_updated_on: 2022-07-13 19:58:37.000000000 Z
